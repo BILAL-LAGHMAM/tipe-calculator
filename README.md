@@ -68,3 +68,13 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+
+    Calculate Tip:
+        Tip Amount = $142.55 * (15 / 100) = $21.38
+
+    Calculate Total Cost:
+        Total Cost = $142.55 + $21.38 = $163.93
+
+    Calculate Per Person Cost:
+        Per Person Cost = $163.93 / 5 = $32.79

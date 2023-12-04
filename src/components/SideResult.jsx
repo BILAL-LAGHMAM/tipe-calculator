@@ -12,18 +12,22 @@ function SideResult(props) {
         setTipAmount(isNaN(calcTipAmount) ? 0 : calcTipAmount);
         setTotal(isNaN(calcTotal) ? 0 : calcTotal);
     }, [props.bill]);
+    const reset = () => {
+        setTipAmount(0);
+        setTotal(0)
+    }
     return (
         <div className="SideResult">
             <article>
                 <p>Tip Amount <br /> <span>/ person</span></p>
-                <p>{tipAmount[0] && tipAmount[0].toFixed(2)}$</p>
+                <p>{tipAmount[0] ? tipAmount[0].toFixed(2) : "0.00"}$</p>
             </article>
             <article>
                 <p>Total <br /> <span>/ person</span></p>
-                <p>{total[0] && total[0].toFixed(2)}$</p>
+                <p>{total[0] ? total[0].toFixed(2) : "0.00"}$</p>
             </article>
             <article>
-                <button>RESET</button>
+                <button style={{ backgroundColor: total === 0 && "hsla(172, 67%, 45%, 0.447)" }} onClick={reset}>RESET</button>
             </article>
         </div>
     );

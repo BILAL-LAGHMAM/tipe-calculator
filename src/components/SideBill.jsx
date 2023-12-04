@@ -32,11 +32,11 @@ function SideBill({ dataTocalc }) {
     return (
         <div className="SideBill">
             <article>
-                <h1>Bill <span style={{color:"red"}}>{billError ? "Can't Be Zero" : ""}</span></h1>
+                <h1>Bill <span style={{ color: "red" }}>{billError ? "Can't Be Zero" : ""}</span></h1>
                 <article className="inpBill">
                     <input type="text" onChange={(e) => setBill(e.target.value)} />
                 </article>
-                
+
             </article>
             <article>
                 <h1>Select Tip %</h1>
@@ -56,11 +56,11 @@ function SideBill({ dataTocalc }) {
                     <button value={50} onClick={(e) => SendToCalc(e)}>
                         50%
                     </button>
-                    <input onMouseLeave={(e) => SendToCalc(e)} placeholder="Custom" />
+                    <input onMouseLeave={(e) => e.target.value !== "" && SendToCalc(e)} placeholder="Custom" />
                 </article>
             </article>
             <article>
-                <h1>Number of People <span style={{color:"red"}}>{nbrPeopleError ? "Can't Be Zero" : ""}</span></h1>
+                <h1>Number of People <span style={{ color: "red" }}>{nbrPeopleError ? "Can't Be Zero" : ""}</span></h1>
                 <article className="inpBill">
                     <input type="text" onChange={(e) => setNbrPeople(e.target.value)} />
                 </article>
